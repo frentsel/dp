@@ -1,0 +1,28 @@
+<h1>The Factory Design Pattern In JavaScript</h1>
+<img src="https://anasshekhamis.com/content/images/2017/10/factory-design-pattern-in-javascript-min.jpg"
+  alt="The Factory Design Pattern In JavaScript">
+<code>
+  <pre>
+const ShapeFactory = function() {
+  this.createShape = function(shapeType) {
+    return new function() {
+      this.draw = function() {
+        console.log(`This is a ${shapeType}`);
+      }
+    };
+  }
+}
+
+const factory = new ShapeFactory();
+
+const rectangle = factory.createShape('rectangle');
+const square = factory.createShape('square');
+const triangle = factory.createShape('triangle');
+
+rectangle.draw();
+square.draw();
+triangle.draw();
+
+// https://jsfiddle.net/aShulz/roh2aw9c/
+  </pre>
+</code>

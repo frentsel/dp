@@ -1,0 +1,83 @@
+@import url( 'https://fonts.googleapis.com/css?family=Montserrat:300,500,700&subset=cyrillic');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #345;
+  font-size: 14px;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: #e2e2e2;
+}
+
+#wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 'h h h h h h h h h h h h' 'c c c c c c c c c a a a' 'f f f f f f f f f f f f';
+  min-height: 100%;
+  height: auto;
+}
+
+#wrapper > * {
+  padding: 15px;
+}
+
+header {
+  grid-area: h;
+  border-bottom: 1px dashed #bfbfbf;
+}
+
+section {
+  grid-area: s;
+  flex-grow: 1;
+  grid-area: c;
+}
+
+section > img {
+  max-width: 100%;
+}
+
+aside {
+  grid-area: a;
+  border-left: 1px dashed #bfbfbf;
+  flex-basis: 20%;
+  color: #334455c7;
+}
+
+aside > ul,
+aside > ul ul {
+  margin-left: 15px;
+}
+
+aside > ul > li {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+aside > ul > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+aside > ul ul > li {
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+footer {
+  grid-area: f;
+  border-top: 1px dashed #bfbfbf;
+}
